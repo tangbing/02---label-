@@ -12,7 +12,7 @@ typedef enum {
 /** 精华-顶部标题的高度 */
 UIKIT_EXTERN CGFloat const XMGTitilesViewH;
 /** 精华-顶部标题的Y */
-UIKIT_EXTERN CGFloat const XMGTitilesViewY;
+//UIKIT_EXTERN CGFloat const XMGTitilesViewY;
 
 /** 发布-间距 */
 UIKIT_EXTERN CGFloat const XMGTagMargin;

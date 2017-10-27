@@ -10,6 +10,7 @@
 #import "XMGRecommendTagsViewController.h"
 #import "XMGTopicViewController.h"
 
+
 @interface XMGEssenceViewController() <UIScrollViewDelegate>
 /** 标签栏底部的红色指示器 */
 @property (nonatomic, weak) UIView *indicatorView;
@@ -76,6 +77,20 @@
  */
 - (void)setupTitlesView
 {
+    /*
+     适配iphonx，
+     */
+    CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];
+    XMGLog(@"---------------------StatusRect%@",NSStringFromCGRect(StatusRect));
+    // 44
+    
+    CGRect NavRect = self.navigationController.navigationBar.frame;
+    XMGLog(@"------------NavRect%@",NSStringFromCGRect(NavRect));
+    //44
+    
+    CGFloat XMGTitilesViewY = StatusRect.size.height + NavRect.size.height;
+    
+    
     // 标签栏整体
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
@@ -151,7 +166,7 @@
 - (void)setupContentView
 {
     // 不要自动调整inset
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    //self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *contentView = [[UIScrollView alloc] init];
     contentView.frame = self.view.bounds;

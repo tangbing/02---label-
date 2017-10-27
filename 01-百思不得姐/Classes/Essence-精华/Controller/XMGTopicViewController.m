@@ -52,10 +52,27 @@
 static NSString * const XMGTopicCellId = @"topic";
 - (void)setupTableView
 {
-    // 设置内边距
+    if(@available(ios 11.0, *)){
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    /*
+     适配iphoneX
+    CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];
+    //XMGLog(@"---------------------StatusRect%@",NSStringFromCGRect(StatusRect));
+    // 44
+    CGRect NavRect = self.navigationController.navigationBar.frame;
+    //XMGLog(@"------------NavRect%@",NSStringFromCGRect(NavRect));
+    //44
+     */
+    
+     // 设置内边距
     CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = XMGTitilesViewY + XMGTitilesViewH;
+    CGFloat top =  XMGTitilesViewH;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+  
+
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
@@ -75,7 +92,7 @@ static NSString * const XMGTopicCellId = @"topic";
     if (self.lastSelectedIndex == self.tabBarController.selectedIndex
 //        && self.tabBarController.selectedViewController == self.navigationController
         && self.view.isShowingOnKeyWindow) {
-        [self.tableView.header beginRefreshing];
+        [self.tableView.mj_header beginRefreshing];
     }
     
     // 记录这一次选中的索引
@@ -84,12 +101,12 @@ static NSString * const XMGTopicCellId = @"topic";
 
 - (void)setupRefresh
 {
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     // 自动改变透明度
-    self.tableView.header.autoChangeAlpha = YES;
-    [self.tableView.header beginRefreshing];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
 #pragma mark - a参数

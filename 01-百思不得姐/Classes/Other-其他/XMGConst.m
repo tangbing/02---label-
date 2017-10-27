@@ -1,10 +1,11 @@
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 /** 精华-顶部标题的高度 */
 CGFloat const XMGTitilesViewH = 35;
 /** 精华-顶部标题的Y */
-CGFloat const XMGTitilesViewY = 64;
+//CGFloat const XMGTitilesViewY = 64;
 
 /** 发布-间距 */
 CGFloat const XMGTagMargin = 5;

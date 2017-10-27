@@ -6,7 +6,7 @@ pod "AFNetworking"
 pod "SDWebImage"
 pod "SVProgressHUD"
 pod "MJExtension"
-pod "MJRefresh"
+pod "MJRefresh" , '~> 3.1.12'
 pod "DACircularProgress"
 pod "pop"
 pod 'NJKWebViewProgress'

@@ -175,7 +175,7 @@
 		70B5CB621B5F27D200E1C3EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70B5CB6B1B5F27D200E1C3EA /* 01-百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B5CB701B5F27D200E1C3EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70B5CB711B5F27D200E1C3EA /* _1______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1______Tests.m"; sourceTree = "<group>"; };
+		70B5CB711B5F27D200E1C3EA /* _1______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1______Tests.m; sourceTree = "<group>"; };
 		70B5CB9A1B5F7EEF00E1C3EA /* XMGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceViewController.h; sourceTree = "<group>"; };
 		70B5CB9B1B5F7EEF00E1C3EA /* XMGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceViewController.m; sourceTree = "<group>"; };
 		70B5CBA01B5F7EEF00E1C3EA /* XMGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -643,12 +643,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 70B5CB751B5F27D200E1C3EA /* Build configuration list for PBXNativeTarget "01-百思不得姐" */;
 			buildPhases = (
-				20DEC644E2D847727BEBD630 /* 📦 Check Pods Manifest.lock */,
+				20DEC644E2D847727BEBD630 /* [CP] Check Pods Manifest.lock */,
 				70B5CB4E1B5F27D200E1C3EA /* Sources */,
 				70B5CB4F1B5F27D200E1C3EA /* Frameworks */,
 				70B5CB501B5F27D200E1C3EA /* Resources */,
-				325D848F9BF4A8B092CF1B7D /* 📦 Embed Pods Frameworks */,
-				D229257D428C8B9CE2EB4EDF /* 📦 Copy Pods Resources */,
+				325D848F9BF4A8B092CF1B7D /* [CP] Embed Pods Frameworks */,
+				D229257D428C8B9CE2EB4EDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -752,29 +752,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20DEC644E2D847727BEBD630 /* 📦 Check Pods Manifest.lock */ = {
+		20DEC644E2D847727BEBD630 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		325D848F9BF4A8B092CF1B7D /* 📦 Embed Pods Frameworks */ = {
+		325D848F9BF4A8B092CF1B7D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,14 +782,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-01-百思不得姐/Pods-01-百思不得姐-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D229257D428C8B9CE2EB4EDF /* 📦 Copy Pods Resources */ = {
+		D229257D428C8B9CE2EB4EDF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

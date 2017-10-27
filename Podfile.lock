@@ -22,7 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - DACircularProgress (2.3.1)
   - MJExtension (2.5.5)
-  - MJRefresh (2.3.2)
+  - MJRefresh (3.1.12)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
     - NJKWebViewProgress/ProgressView (= 0.2.3)
@@ -38,7 +38,7 @@ DEPENDENCIES:
   - AFNetworking
   - DACircularProgress
   - MJExtension
-  - MJRefresh
+  - MJRefresh (~> 3.1.12)
   - NJKWebViewProgress
   - pop
   - SDWebImage
@@ -48,12 +48,12 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   MJExtension: fa526531d00a7c88771bf72e626bb49fb9292b9c
-  MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
 
-PODFILE CHECKSUM: fd8371b18c64f8ece8f6f62e4f9419cc1c0f204d
+PODFILE CHECKSUM: fa1d8610386dac564783e3b2bfb8642ba84e251f
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.1
