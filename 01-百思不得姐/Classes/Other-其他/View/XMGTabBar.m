@@ -22,7 +22,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         // 设置tabbar的背景图片
-        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+        //[self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
         
         // 添加发布按钮
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
