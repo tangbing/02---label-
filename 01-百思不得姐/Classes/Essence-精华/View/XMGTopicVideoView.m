@@ -22,6 +22,7 @@
 
 - (void)awakeFromNib
 {
+    
     self.autoresizingMask = UIViewAutoresizingNone;
     
     // 给图片添加监听器

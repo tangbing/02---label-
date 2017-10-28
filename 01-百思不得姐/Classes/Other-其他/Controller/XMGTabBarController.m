@@ -41,6 +41,8 @@
 {
     [super viewDidLoad];
     
+    XMGLog(@"------%@",NSStringFromCGRect(self.tabBar.frame));
+    
     // 添加子控制器
     [self setupChildVc:[[XMGEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     

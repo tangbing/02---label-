@@ -103,7 +103,6 @@
             CGFloat videoW = maxSize.width;
             CGFloat videoH = videoW * self.height / self.width;
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
-            
             _cellHeight += videoH + XMGTopicCellMargin;
         }
         

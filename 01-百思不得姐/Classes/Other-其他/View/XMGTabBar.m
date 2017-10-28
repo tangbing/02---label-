@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
+
+
 #import "XMGTabBar.h"
 #import "XMGNavigationController.h"
 #import "XMGPublishViewController.h"
@@ -55,7 +57,10 @@
     static BOOL added = NO;
     
     CGFloat width = self.width;
-    CGFloat height = self.height;
+    CGFloat height = kDevice_Is_iPhoneX ? self.height - 34 : self.height;
+    
+    XMGLog(@"width:%f",width);
+    XMGLog(@"height:%f",height);
     
     // 设置发布按钮的frame
     self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);

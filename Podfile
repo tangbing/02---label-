@@ -10,7 +10,7 @@ pod "MJRefresh" , '~> 3.1.12'
 pod "DACircularProgress"
 pod "pop"
 pod 'NJKWebViewProgress'
-
+pod 'Masonry' , '~> 1.1.0'
 end
 
 
